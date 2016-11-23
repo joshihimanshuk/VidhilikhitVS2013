@@ -1,0 +1,206 @@
+﻿@model IEnumerable<VidhilikhitVS2013.Models.tblRegistration>
+
+@{
+    ViewBag.Title = "Search";
+}
+@*<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Religion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MotherTounge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Caste)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Religion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MotherTounge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Caste)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>*@
+<div class="grid_3">
+    <div class="container">
+        <div class="col-md-9 profile_left">
+            <div class="paid_people">
+                <h1>Serch Result</h1>
+                <div class="row_2">
+@foreach (var item in Model)
+{
+                    <div class="col-sm-6 paid_people-left">
+                        <ul class="profile_item">
+                            <a href="#">
+
+
+                                <li class="profile_item-desc">
+                                    
+                                    <h4>@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName) </h4>
+                                    <p>@Html.DisplayText(item.Caste),@Html.DisplayFor(modelItem => item.Caste) </p>
+                                    <h5>@Html.ActionLink("Details", "Details", new { id = item.Id }) </h5>
+
+                                </li>
+                                <div class="clearfix"> </div>
+                            </a>
+                        </ul>
+                    </div>
+}
+                    
+                    
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 match_right">
+            <div class="profile_search1">
+                <form>
+                    <input type="text" class="m_1" name="ne" size="30" required="" placeholder="Enter Profile ID :">
+                    <input type="submit" value="Go">
+                </form>
+            </div>
+            <section class="slider">
+                <h3>Happy Marriage</h3>
+                <div class="flexslider">
+                    <ul class="slides">
+                        <li>
+                            <img src="images/s2.jpg" alt="" />
+                            <h4>Lorem & Ipsum</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable</p>
+                        </li>
+                        <li>
+                            <img src="images/s1.jpg" alt="" />
+                            <h4>Lorem & Ipsum</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable</p>
+                        </li>
+                        <li>
+                            <img src="images/s3.jpg" alt="" />
+                            <h4>Lorem & Ipsum</h4>
+                            <p>It is a long established fact that a reader will be distracted by the readable</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <div class="view_profile view_profile2">
+                <h3>View Similar Profiles</h3>
+                <ul class="profile_item">
+                    <a href="#">
+                        <li class="profile_item-img">
+                            <img src="images/p5.jpg" class="img-responsive" alt="" />
+                        </li>
+                        <li class="profile_item-desc">
+                            <h4>2458741</h4>
+                            <p>29 Yrs, 5Ft 5in Christian</p>
+                            <h5>View Full Profile</h5>
+                        </li>
+                        <div class="clearfix"> </div>
+                    </a>
+                </ul>
+                <ul class="profile_item">
+                    <a href="#">
+                        <li class="profile_item-img">
+                            <img src="images/p6.jpg" class="img-responsive" alt="" />
+                        </li>
+                        <li class="profile_item-desc">
+                            <h4>2458741</h4>
+                            <p>29 Yrs, 5Ft 5in Christian</p>
+                            <h5>View Full Profile</h5>
+                        </li>
+                        <div class="clearfix"> </div>
+                    </a>
+                </ul>
+                <ul class="profile_item">
+                    <a href="#">
+                        <li class="profile_item-img">
+                            <img src="images/p7.jpg" class="img-responsive" alt="" />
+                        </li>
+                        <li class="profile_item-desc">
+                            <h4>2458741</h4>
+                            <p>29 Yrs, 5Ft 5in Christian</p>
+                            <h5>View Full Profile</h5>
+                        </li>
+                        <div class="clearfix"> </div>
+                    </a>
+                </ul>
+                <ul class="profile_item">
+                    <a href="#">
+                        <li class="profile_item-img">
+                            <img src="images/p8.jpg" class="img-responsive" alt="" />
+                        </li>
+                        <li class="profile_item-desc">
+                            <h4>2458741</h4>
+                            <p>29 Yrs, 5Ft 5in Christian</p>
+                            <h5>View Full Profile</h5>
+                        </li>
+                        <div class="clearfix"> </div>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "Dummy";
+}
+
+<h2>Dummy</h2>
+
+@using (Html.BeginForm("AddUser", "User", FormMethod.Post))
+{
+    @Html.DropDownList("Gender", new List<SelectListItem>
+                           {
+                               new SelectListItem {Text="Bride",Value="Bride" },
+                               new SelectListItem {Text="Groome",Value="Groom" }
+                           }, "Select")
+
+    <select id="State" name="State">
+        <option value="">* Select State</option>
+        <option value="Washington">Washington</option>
+        <option value="Texas">Texas</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Virginia">Virginia</option>
+        <option value="Colorado">Colorado</option>
+    </select>
+    <input type="submit" name="" value="Search" />
+
+}
